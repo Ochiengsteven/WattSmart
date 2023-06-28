@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WattSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/777f7df888.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h1>WattSmart</h1>
+    </nav>
+    <main>
+        <!-- add device to calculate -->
+        <section class="dashboard" id="dashboard">
+            <h2 class="">Dashboard</h2>
+
+            <div class="input-container">
+                <form action="">
+                    <label for="wattage">Device Wattage (in watts):</label>
+                    <input type="number" id="wattage" placeholder="Enter wattage">
+                    <div class="watt-btn">
+                        <button id="calculateBtn">Calculate</button>
+                    </div>
+                </form>
+                
+                <aside>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <i class="fa-sharp fa-solid fa-bolt"></i>
+                    <i class="fa-solid fa-plug"></i>
+                    <i class="fa-solid fa-power-off"></i>
+                </aside>
+            </div>
+            <div id="results">
+                <div></div>
+                <div class="cost-calc">
+                    <div class="minute-cost">
+                        <h5>Power/Minute:</h5>
+                        <p id="powerPerMinute">0</p>
+                        <h5>Cost:</h5>
+                        <p id="minute-cost">0</p>
+                    </div>
+                    <div class="hour-cost">
+                        <h5>Power/houur:</h5>
+                        <p id="powerPerHour">0</p>
+                        <h5>Cost:</h5>
+                        <p id="hour-cost">0</p>
+                    </div>
+                    <div class="form-box">
+                        <div class="button-box">
+                            <div id="btn"></div>
+                            <button type="button" class="toggle-btn" onclick="">Minute</button>
+                            <button type="button" class="toggle-btn" onclick="">Hour</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- device profiles
+        <div>
+            <select id="deviceProfiles">
+                <option value="">Select a Device Profile</option>
+                <option value="100">TV</option>
+                <option value="500">Refrigerator</option>
+                <option value="50">Laptop</option>
+              </select>
+              <button id="addProfileBtn">Add Device Profile</button>              
+        </div>  -->
+        <!-- Usage History
+        <div>
+            <h2>Usage History</h2>
+            <ul id="usageList"></ul>
+        </div> -->
+    </main>
+    <footer></footer>
+    <script src="./app.js"></script>
+</body>
+</html>
