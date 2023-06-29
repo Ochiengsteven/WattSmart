@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>WattSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/777f7df888.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h1 class="logo"><img src="./assets/logo.png" alt="logo">WattSmart</h1>
+        <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
+        <div class="menu">
+                <ul id="mainMenu" class="list">
+                    <div class="menuItems">
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#history">History</a></li>
+                        <!-- <li><a href="#Statistics">Statistics</a></li> -->
+                    </div>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- add device to calculate -->
+        <section class="dashboard" id="dashboard">
+            <h2 class="">Dashboard</h2>
+
+            <div class="input-container">
+                <form action="">
+                    <label for="wattage">Device Wattage (in watts):</label>
+                    <input type="number" id="wattage" placeholder="Enter wattage">
+                    <div class="watt-btn">
+                        <button id="calculateBtn">Calculate</button>
+                    </div>
+                </form>
+                
+                <aside>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <i class="fa-sharp fa-solid fa-bolt"></i>
+                    <i class="fa-solid fa-plug"></i>
+                    <i class="fa-solid fa-power-off"></i>
+                </aside>
+            </div>
+            <div id="results">
+                <div></div>
+                <div class="cost-calc">
+                    <div class="minute-cost">
+                        <h5>Power:</h5>
+                        <p id="powerPerMinute">0.00</p>
+                        <h5>Cost:</h5>
+                        <p id="costMinute">0.00</p>
+                    </div>
+                    <div class="hour-cost">
+                        <h5>Power:</h5>
+                        <p id="powerPerHour">0.00</p>
+                        <h5>Cost:</h5>
+                        <p id="costHour">0.00</p>
+                    </div>
+                    <div class="form-box">
+                        <div class="button-box">
+                            <div id="btn"></div>
+                            <button type="button" class="toggle-btn" onclick="hourClick()" id="minutebtn">Minute</button>
+                            <button type="button" class="toggle-btn" onclick="minuteClick()" id="hourbtn">Hour</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- device profiles
+        <div>
+            <select id="deviceProfiles">
+                <option value="">Select a Device Profile</option>
+                <option value="100">TV</option>
+                <option value="500">Refrigerator</option>
+                <option value="50">Laptop</option>
+              </select>
+              <button id="addProfileBtn">Add Device Profile</button>              
+        </div>  -->
+        <!-- Usage History
+        <div>
+            <h2>Usage History</h2>
+            <ul id="usageList"></ul>
+        </div> -->
+    </main>
+    <footer></footer>
+    <script src="./app.js"></script>
+</body>
+</html>
