@@ -28,3 +28,38 @@ openMenu.addEventListener('click', show);
 closeMenu.addEventListener('click', close);
 dashboard.addEventListener('click', close);
 history.addEventListener('click', close);
+
+// cost calculator
+function calculatePowerPerMinute(wattage) {
+    const powerPerMinute = (wattage / 1000) * (1 / 60);
+    return powerPerMinute.toFixed(4);
+}
+
+function calculatePowerPerHour(powerPerMinute) {
+    const powerPerHour = powerPerMinute * 60;
+    return powerPerHour.toFixed(4);
+}
+
+function calculateCostminute(powerPerMinute) {
+    const cost = powerPerMinute * 22;
+    return cost.toFixed(2);
+}
+
+function calculateCosthour(powerPerHour) {
+return (powerPerHour) * 22;
+}
+
+document.getElementById('calculateBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const wattage = document.getElementById('wattage').value;
+
+    const powerPerMinute = calculatePowerPerMinute(wattage);
+    const powerPerHour = calculatePowerPerHour(powerPerMinute);
+    const costHour = calculateCosthour(powerPerHour);
+    const costMinute = calculateCostminute(powerPerMinute);
+
+    document.getElementById('powerPerMinute').textContent = powerPerMinute + ' kWh';
+    document.getElementById('costMinute').textContent = costMinute + ' Kshs';
+    document.getElementById('powerPerHour').textContent = 'Power per hour: ' + powerPerHour + ' watts';
+    document.getElementById('cost').textContent = 'Cost: ' + costHour + ' kshs';
+});

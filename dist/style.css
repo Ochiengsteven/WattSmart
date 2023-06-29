@@ -115,6 +115,40 @@ aside {
   right: 4%;
 }
 
+/* icons effects */
+aside i:nth-child(2) {
+  color: #fff; /* Original color of the icon */
+  transition: color 0.5s ease-in-out; /* Smooth transition */
+}
+
+aside i:nth-child(2):hover,
+aside i:nth-child(1):hover {
+  transform: rotate(360deg); /* Rotate the icon on hover */
+  color: blue; /* Color on hover */
+  animation: flame-transition 1s infinite alternate;
+}
+
+aside i:nth-child(3):hover,
+aside i:nth-child(4):hover {
+  transform: scale(1.2); /* Scale the icon on hover */
+}
+
+@keyframes flame-transition {
+  0% {
+    color: blue;
+  }
+  
+  50% {
+    color: orange; /* Intermediate color for the flame effect */
+  }
+  
+  100% {
+    color: blue;
+  }
+}
+
+/* end of icon effects */
+
 input {
   margin-top: 6%;
   padding: 10px;
@@ -165,6 +199,7 @@ input {
   outline: none;
   position: relative;
   text-align: center;
+  color: #fff;
 }
 
 .white-btn {
@@ -177,7 +212,7 @@ input {
   position: absolute;
   width: 110px;
   height: 100%;
-  background: #009879;
+  background: #000;
   border-radius: 30px;
   transition: 0.5s;
 }
