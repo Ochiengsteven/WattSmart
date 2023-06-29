@@ -46,7 +46,8 @@ function calculateCostminute(powerPerMinute) {
 }
 
 function calculateCosthour(powerPerHour) {
-return (powerPerHour) * 22;
+    const cost = (powerPerHour) * 22;
+    return cost.toFixed(2);
 }
 
 document.getElementById('calculateBtn').addEventListener('click', function(e) {
@@ -60,6 +61,26 @@ document.getElementById('calculateBtn').addEventListener('click', function(e) {
 
     document.getElementById('powerPerMinute').textContent = powerPerMinute + ' kWh';
     document.getElementById('costMinute').textContent = costMinute + ' Kshs';
-    document.getElementById('powerPerHour').textContent = 'Power per hour: ' + powerPerHour + ' watts';
-    document.getElementById('cost').textContent = 'Cost: ' + costHour + ' kshs';
+    document.getElementById('powerPerHour').textContent = powerPerHour + ' kWh';
+    document.getElementById('costHour').textContent = costHour + ' kshs';
 });
+
+// Display minutes and hours cost dynamically
+const hourClickbtn = () => {
+    const minuteCost = document.querySelector('.minute-cost');
+    const hourCost = document.querySelector('.hour-cost');
+    
+    minuteCost.style.display = 'none';
+    hourCost.style.display = 'block';
+}
+
+const minuteClickbtn = () => {
+    const minuteCost = document.querySelector('.minute-cost');
+    const hourCost = document.querySelector('.hour-cost');
+    
+    minuteCost.style.display = 'block';
+    hourCost.style.display = 'none';
+}
+
+document.getElementById('minutebtn').addEventListener('click', minuteClickbtn);
+document.getElementById('hourbtn').addEventListener('click', hourClickbtn);

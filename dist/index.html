@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>WattSmart</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,7 @@
 </head>
 <body>
     <nav>
-        <h1 class="logo">WattSmart</h1>
+        <h1 class="logo"><img src="./assets/logo.png" alt="logo">WattSmart</h1>
         <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
         <div class="menu">
                 <ul id="mainMenu" class="list">
@@ -51,21 +52,21 @@
                 <div class="cost-calc">
                     <div class="minute-cost">
                         <h5>Power:</h5>
-                        <p id="powerPerMinute"></p>
+                        <p id="powerPerMinute">0.00</p>
                         <h5>Cost:</h5>
-                        <p id="costMinute"></p>
+                        <p id="costMinute">0.00</p>
                     </div>
                     <div class="hour-cost">
                         <h5>Power:</h5>
-                        <p id="powerPerHour">0</p>
+                        <p id="powerPerHour">0.00</p>
                         <h5>Cost:</h5>
-                        <p id="costHour">0</p>
+                        <p id="costHour">0.00</p>
                     </div>
                     <div class="form-box">
                         <div class="button-box">
                             <div id="btn"></div>
-                            <button type="button" class="toggle-btn" onclick="hourClick()">Minute</button>
-                            <button type="button" class="toggle-btn" onclick="minuteClick()">Hour</button>
+                            <button type="button" class="toggle-btn" onclick="hourClick()" id="minutebtn">Minute</button>
+                            <button type="button" class="toggle-btn" onclick="minuteClick()" id="hourbtn">Hour</button>
                         </div>
                     </div>
                 </div>
