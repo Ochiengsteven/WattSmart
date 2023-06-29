@@ -12,9 +12,8 @@ const hourClick = () => {
 const mainMenu = document.querySelector('#mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
-const portfolio = document.querySelector('a[href="#my-work"]');
-const aboutMe = document.querySelector('a[href="#about-me"]');
-const contactMe = document.querySelector('a[href="#contact-me"]');
+const dashboard = document.querySelector('a[href="#dashboard"]');
+const history = document.querySelector('a[href="#history"]');
 
 function show() {
   mainMenu.style.display = 'flex';
@@ -27,6 +26,5 @@ function close() {
 
 openMenu.addEventListener('click', show);
 closeMenu.addEventListener('click', close);
-portfolio.addEventListener('click', close);
-aboutMe.addEventListener('click', close);
-contactMe.addEventListener('click', close);
+dashboard.addEventListener('click', close);
+history.addEventListener('click', close);

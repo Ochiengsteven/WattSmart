@@ -218,7 +218,7 @@ nav #mainMenu li a {
   display: inline-block;
   padding: 15px;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #505f79;
   font-size: 1.1rem;
   font-weight: 600;
@@ -226,7 +226,9 @@ nav #mainMenu li a {
 }
 
 nav #mainMenu li a:hover {
-  color: #172b4d;
+  color: #009879;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 nav .openMenu {
@@ -276,6 +278,7 @@ nav #mainMenu .closeMenu {
 
   .menuItems {
     flex-direction: column;
+    padding-top: 20%;
   }
 
   .fa-bars:before, .fa-navicon:before {
