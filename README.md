@@ -54,9 +54,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->this is the link to my live demo of the WattSmart app [here](https://ochiengsteven.github.io/awesome-books-es6/)
+>this is the link to my live demo of the WattSmart app [here](https://gleeful-souffle-ba388b.netlify.app/)
 
-- https://ochiengsteven.github.io/WattSmart/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
